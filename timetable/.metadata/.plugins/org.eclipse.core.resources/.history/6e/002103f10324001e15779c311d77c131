@@ -1,0 +1,29 @@
+package timetable;
+
+import java.util.Scanner;
+
+public class student_tt {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n, last = 0, first = 0, temp;
+		String s;
+		n = sc.nextInt();
+		temp = n;
+		last = n % 10;
+		while (n >= 9) {
+			first = n / 10;
+			n = n / 10;
+		}
+		s = Integer.toString(first) + Integer.toString(last);
+		int div = Integer.parseInt(s);
+		if (temp % div == 0) {
+			System.out.println("Gapful number");
+		} else {
+			System.out.println("Not Gapful number");
+		}
+
+	}
+
+}
